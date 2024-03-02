@@ -1,0 +1,33 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.AnalyticsAdapter = void 0;
+/*eslint no-unused-vars: "off"*/
+/**
+ * @interface AnalyticsAdapter
+ * @module Adapters
+ */
+class AnalyticsAdapter {
+  /**
+  @param {any} parameters: the analytics request body, analytics info will be in the dimensions property
+  @param {Request} req: the original http request
+   */
+  appOpened(parameters, req) {
+    return Promise.resolve({});
+  }
+
+  /**
+  @param {String} eventName: the name of the custom eventName
+  @param {any} parameters: the analytics request body, analytics info will be in the dimensions property
+  @param {Request} req: the original http request
+   */
+  trackEvent(eventName, parameters, req) {
+    return Promise.resolve({});
+  }
+}
+exports.AnalyticsAdapter = AnalyticsAdapter;
+var _default = AnalyticsAdapter;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJBbmFseXRpY3NBZGFwdGVyIiwiYXBwT3BlbmVkIiwicGFyYW1ldGVycyIsInJlcSIsIlByb21pc2UiLCJyZXNvbHZlIiwidHJhY2tFdmVudCIsImV2ZW50TmFtZSJdLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9BZGFwdGVycy9BbmFseXRpY3MvQW5hbHl0aWNzQWRhcHRlci5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKmVzbGludCBuby11bnVzZWQtdmFyczogXCJvZmZcIiovXG4vKipcbiAqIEBpbnRlcmZhY2UgQW5hbHl0aWNzQWRhcHRlclxuICogQG1vZHVsZSBBZGFwdGVyc1xuICovXG5leHBvcnQgY2xhc3MgQW5hbHl0aWNzQWRhcHRlciB7XG4gIC8qKlxuICBAcGFyYW0ge2FueX0gcGFyYW1ldGVyczogdGhlIGFuYWx5dGljcyByZXF1ZXN0IGJvZHksIGFuYWx5dGljcyBpbmZvIHdpbGwgYmUgaW4gdGhlIGRpbWVuc2lvbnMgcHJvcGVydHlcbiAgQHBhcmFtIHtSZXF1ZXN0fSByZXE6IHRoZSBvcmlnaW5hbCBodHRwIHJlcXVlc3RcbiAgICovXG4gIGFwcE9wZW5lZChwYXJhbWV0ZXJzLCByZXEpIHtcbiAgICByZXR1cm4gUHJvbWlzZS5yZXNvbHZlKHt9KTtcbiAgfVxuXG4gIC8qKlxuICBAcGFyYW0ge1N0cmluZ30gZXZlbnROYW1lOiB0aGUgbmFtZSBvZiB0aGUgY3VzdG9tIGV2ZW50TmFtZVxuICBAcGFyYW0ge2FueX0gcGFyYW1ldGVyczogdGhlIGFuYWx5dGljcyByZXF1ZXN0IGJvZHksIGFuYWx5dGljcyBpbmZvIHdpbGwgYmUgaW4gdGhlIGRpbWVuc2lvbnMgcHJvcGVydHlcbiAgQHBhcmFtIHtSZXF1ZXN0fSByZXE6IHRoZSBvcmlnaW5hbCBodHRwIHJlcXVlc3RcbiAgICovXG4gIHRyYWNrRXZlbnQoZXZlbnROYW1lLCBwYXJhbWV0ZXJzLCByZXEpIHtcbiAgICByZXR1cm4gUHJvbWlzZS5yZXNvbHZlKHt9KTtcbiAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBBbmFseXRpY3NBZGFwdGVyO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ08sTUFBTUEsZ0JBQWdCLENBQUM7RUFDNUI7QUFDRjtBQUNBO0FBQ0E7RUFDRUMsU0FBUyxDQUFDQyxVQUFVLEVBQUVDLEdBQUcsRUFBRTtJQUN6QixPQUFPQyxPQUFPLENBQUNDLE9BQU8sQ0FBQyxDQUFDLENBQUMsQ0FBQztFQUM1Qjs7RUFFQTtBQUNGO0FBQ0E7QUFDQTtBQUNBO0VBQ0VDLFVBQVUsQ0FBQ0MsU0FBUyxFQUFFTCxVQUFVLEVBQUVDLEdBQUcsRUFBRTtJQUNyQyxPQUFPQyxPQUFPLENBQUNDLE9BQU8sQ0FBQyxDQUFDLENBQUMsQ0FBQztFQUM1QjtBQUNGO0FBQUM7QUFBQSxlQUVjTCxnQkFBZ0I7QUFBQSJ9

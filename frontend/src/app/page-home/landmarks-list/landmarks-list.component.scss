@@ -1,0 +1,73 @@
+#landmarks{
+    .section_wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));       
+        grid-gap: 20px; 
+        padding: 0px 15px;
+        .cu_card{
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 20px;
+            position: relative;
+            &:hover{
+                .image_container{
+                    img{
+                        transform: scale(1.15);
+                    }
+                } 
+            }
+            .card_wrapper{ 
+                .top_row{
+                    .edit_landmark{
+                        position: absolute;
+                        top: 35px;
+                        right: 20px;
+                        z-index: 5;
+                        text-decoration: unset;
+                        span{
+                            padding: 15px 30px;                           
+                            color:  var(--regular-color);
+                            font-size: 18px;
+                            font-weight: 700;
+                            border-radius: 12px;
+                            background-color: #f2f2f2;
+                            text-decoration: unset;
+                        }
+                    }
+                }             
+                .image_container{                   
+                    border-radius: 16px;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 300px;
+                    display: flex;
+                    img{
+                        transition: all 0.3s ease-in-out;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .the_context {
+                    text-decoration: unset;
+                    color: #000;
+                    .the_title{
+                        h2{
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .the_description{
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5; /* number of lines to show */
+                                line-clamp: 5; 
+                        -webkit-box-orient: vertical;
+                        max-height: 110px;
+                    }
+                }
+               
+            }
+        }
+    }
+}

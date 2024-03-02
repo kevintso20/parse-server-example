@@ -1,0 +1,28 @@
+<div id="menu">
+    <div class="menu_wrapper">
+        <div class="first_row">
+            <div class="cu_col left_side">
+                <a routerLink="/">
+                    <div class="image_container">                        
+                        <img src="../../../assets/logo.png" alt="Logo">
+                    </div>
+                </a>
+            </div>
+            <div class="cu_col middle">
+                <div class="cu_col_wrapper">
+                    <app-search-bar></app-search-bar>                    
+                </div>
+            </div>
+            <div class="cu_col right_side">
+                <div class="cu_col_wrapper">                   
+                    <a *ngIf="!isLogedIn" routerLink="/auth/login" class="login regular_button">
+                        <span>Login</span>
+                    </a>
+                    <span *ngIf="isLogedIn" (click)="logout()" class="login regular_button">
+                        <span>Logout</span>
+                    </span>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

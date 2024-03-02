@@ -1,0 +1,138 @@
+#search-component{
+    position: relative;
+    .search_wrapper{
+        .first_row{
+            input{
+                background-color: #fff;
+                border: none;
+                width: 100%;
+                border-radius: 50px;
+                height: 50px;
+                font-size: 18px;
+                padding: 10px 25px 10px 50px;
+                background-image: url(../../../assets/search.svg);
+                background-repeat: no-repeat;
+                background-position: 4% 54%; 
+                border: 1px solid #c1c1c1;                    
+                &:focus-visible{
+                    outline: none;
+                }
+                
+            }
+            .close_search{
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                cursor: pointer;
+            }
+        }
+        .second_row{
+            position: fixed;
+            width: calc(100% - 60px);
+            background-color: #f1f1f1;
+            left: 30px;
+            top: 90px;
+            border-radius: 24px;       
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;           
+            overflow-y: auto;
+            max-height: calc(100% - 200px);
+            height: 0px;
+            &.isSearching{
+                top: 150px;
+                opacity: 1;
+                
+                height: 5000px;
+            }
+            &::-webkit-scrollbar {
+                height: 8px;
+                width: 8px;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: 5px;
+                background-color: #DFE9EB;
+            }            
+            &::-webkit-scrollbar-track:hover {
+                background-color: #B8C0C2;
+            }            
+            &::-webkit-scrollbar-track:active {
+                background-color: #B8C0C2;
+            }            
+            &::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background-color: #E33E33;
+            }            
+            &::-webkit-scrollbar-thumb:hover {
+                background-color: #62A34B;
+            }            
+            &::-webkit-scrollbar-thumb:active {
+                background-color: #62A34B;
+            }
+            .second_row_outline{
+                .second_row_wrapper{
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                    flex-wrap: wrap;
+                    padding: 50px 30px 30px;
+                    .nothing_found{
+                        span{
+                            font-weight: 600;
+                            color: var(--regular-color);
+                        }
+                    }
+                    .cu_card{
+                        width: 200px;
+                        background: #fff;
+                        border-radius: 16px;
+                        padding: 16px;
+                        .card_wrapper{
+                            text-decoration: unset;
+                            .image_container{
+                                border-radius: 8px;
+                                overflow: hidden;
+                                display: flex;
+                                height: 200px;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                            .the_title{
+                                h2{
+                                    font-size: 1rem;
+                                    color: var(--regular-color);
+                                    text-align: center;
+                                    margin-top: 10px;
+                                    margin-bottom: 0px;
+                                    overflow: hidden;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                }
+                            }
+                        }
+                    }
+                  
+                }
+              
+            }
+            
+        }
+       
+    }
+}
+
+
+
+
+
+
+
+
+

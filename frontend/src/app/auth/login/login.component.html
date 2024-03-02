@@ -1,0 +1,24 @@
+
+<div id="login">
+    <div class="login_wrapper">
+        <div class="login_form">
+            <div class="first_row">
+                <h1>Login</h1>
+            </div>
+            <div class="second_row">
+                <mat-spinner *ngIf="isLoading"></mat-spinner>
+                <form (submit)="onLogin(loginForm)"  #loginForm="ngForm" *ngIf="!isLoading">
+                    <div class="cu_col input">
+                        <input type="text" name="username" ngModel placeholder="Username" #formUsername="ngModel"  required username>
+                    </div>
+                    <div class="cu_col input">
+                        <input type="password" name="password" ngModel placeholder="Password"  #formPassword="ngModel"  required >
+                    </div>                                       
+                    <div class="cu_col">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

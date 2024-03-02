@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin:  0;
+}
+
+
+@font-face {
+    font-family: 'NatoSans';
+    src: url('../src/assets/fonts/NotoSans-Bold.woff2') format('woff');
+    font-weight: 700
+}
+
+
+@font-face {
+    font-family: 'NatoSans';
+    src: url('../src/assets/fonts/NotoSans-Regular.woff2') format('woff');
+    font-weight: 400
+}
+
+@font-face {
+    font-family: 'NatoSans';
+    src: url('../src/assets/fonts/NotoSans-Light.woff2') format('woff');
+    font-weight: 200
+}
+
+
+
+:root{
+    --regular-color:#E33E33
+}
+html, body { height: 100%; }
+body { margin: 0; }
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:not(.fa) {
+    font-family: 'NatoSans',sans-serif;
+}
+
+
+img{
+    max-width: 100%;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

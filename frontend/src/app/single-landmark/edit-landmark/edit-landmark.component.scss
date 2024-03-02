@@ -1,0 +1,58 @@
+#landmark_info{
+    display: flex;
+    flex-direction: column;
+    padding: 170px 30px 100px;
+    max-width: 700px;
+    margin: 0 auto;
+    mat-spinner{
+        margin: 0 auto;
+    }
+    .first_row{
+        h1{
+
+        }
+    }
+    .second_row{
+        .cu_row{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            span{
+                font-size: 18px;
+                font-weight: 700;
+                display: flex;
+                margin-bottom: 10px;
+            }
+            input{
+                border: none;
+                background: #fff;
+                border-radius: 16px;
+                padding: 20px;
+                font-size: 18px;
+            }
+            textarea{
+                border: none;
+                background: #fff;
+                border-radius: 16px;
+                padding: 20px;
+                &:focus-visible{
+                    outline: none;
+                }
+            }
+        }
+        .the_button{
+            
+            button{
+                background-color: #fff;
+                padding: 12px 55px;
+                border-radius: 40px;
+                color: var(--regular-color);
+                font-weight: 700;
+                font-size: 18px;
+                border: 1px solid var(--regular-color);
+                text-decoration: unset;
+                cursor: pointer;
+            }
+        }
+    }
+}

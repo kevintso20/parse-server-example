@@ -2,28 +2,22 @@
 
 const mongoose = require('mongoose')
 
-const authSchema = mongoose.Schema({
-  email: {
-    type: String,
-    unique: true,
-    lowercase: true,
-    trim: true,
+const authSchema = new mongoose.Schema({
+
+  _id: {
+    type: String,    
     required: true
   },
-  hash_password: {
-    type: String,
+  username: {
+    type: String,    
     required: true
   },
-  created: {
-    type: Date,
-    default: Date.now
-  },
-  forgetPassHash: {
+  _hashed_password: {
     type: String,
-  },
-  forgetPassHashExpiration: {
-    type: Date,
+    required: true
   }
 });
 
-module.exports = mongoose.model('Auth', authSchema)
+
+
+module.exports = mongoose.model('users', authSchema)

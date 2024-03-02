@@ -1,0 +1,46 @@
+<div id="search-component">
+    <div class="search_wrapper">
+        <div class="first_row">
+            <input (focus)="openSearch()" (blur)="closeSearch()"  #inputField (input)="doSearch(inputField.value)" type="text" name="" id="main_search_bar" placeholder="Search...">
+            <div *ngIf="isSearching" [class.isSearching]="isSearching" class="close_search" (click)="closeSearch()">
+                <svg   
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    >
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </div>
+        </div>
+        <div class="second_row" [class.isSearching]="isSearching">
+            <div class="second_row_outline">
+                <div class="second_row_wrapper">
+                    <div class="cu_card" *ngFor="let landmark of searchedLandmarks">
+                        <a href="/landmark/{{ landmark._id }}" class="card_wrapper" data-id="{{ landmark._id }}">
+                          <div class="image_container">
+                            <img [src]="landmark.photo_thumb" alt="">
+                          </div>
+                          <div class="the_title">
+                            <h2>{{ landmark.title }}</h2>
+                          </div>
+                        </a>
+                    </div>
+                    <div class="nothing_found" *ngIf="searchedLandmarks.length < 1" >
+                        <span>We found nothing :( </span>
+                    </div>
+                </div>
+                
+            </div>            
+        </div>
+       
+    </div>
+</div>
+
+

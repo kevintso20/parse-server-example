@@ -1,0 +1,24 @@
+<div id="landmark_info" class="">
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <div *ngIf="!isLoading" class="first_row">
+        <h1>Edit {{ landmark[0]?.title }} landmark</h1>
+    </div>
+    <form *ngIf="!isLoading" class="second_row" (submit)="onSave()" [formGroup]="form">  
+        <div class="cu_row">
+            <span class="the_title">Title</span>
+            <input class="the_value" value="" formControlName="title" name="title" required>
+        </div>       
+        <div class="cu_row">
+            <span class="the_title">Short info</span>
+            <textarea  cols="30" rows="10" class="the_value" value="" formControlName="shortinfo" name="shortinfo" required></textarea>
+                
+        </div>
+        <div class="cu_row">
+            <span class="the_title">Description</span>
+            <textarea cols="30" rows="20" class="the_value" value="" formControlName="description" name="description" required></textarea>
+        </div>
+        <div class="the_button">
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</div>

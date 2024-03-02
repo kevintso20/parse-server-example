@@ -1,0 +1,24 @@
+<div id="landmarks">
+    <div class="section_wrapper">
+        <div class="cu_card" *ngFor="let landmark of landmarks">
+            <div  class="card_wrapper" data-id="{{ landmark._id }}">
+              <div class="top_row">
+                <a *ngIf="isLogedIn" href="/landmark/edit/{{ landmark._id }}" class="edit_landmark">
+                    <span>Edit</span>
+                </a>
+                <a href="{{ landmark.photo }}" target="_blank" class="image_container">
+                    <img [src]="landmark.photo_thumb" alt="">
+                </a>
+              </div>
+              <a href="/landmark/{{ landmark._id }}" class="the_context">
+                <div class="the_title">
+                    <h2>{{ landmark.title }}</h2>
+                </div>
+                <div class="the_description">
+                    <span>{{ landmark.short_info }}</span>
+                </div>
+                </a>              
+            </div>
+        </div>
+    </div>
+</div>

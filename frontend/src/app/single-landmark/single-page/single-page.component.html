@@ -1,0 +1,21 @@
+<div id="single_landmark">
+    <div class="page_wrapper">
+        <div class="image_container">
+            <img src="{{ landmark[0]?.photo }}" alt="">
+        </div>
+        <div class="the_title">
+            <h1>{{ landmark[0]?.title }}</h1>
+        </div>        
+        <div class="the_description">          
+            <span>
+                {{ landmark[0]?.description }}
+            </span>
+        </div>       
+        <div class="the_official_url">
+            <a target="_blank" href="{{ landmark[0]?.url }}">Official Url</a>
+        </div>
+        <div class="the_location">
+            <a target="_blank" href="https://www.google.com/maps?q={{ landmark[0]?.location[1] }},{{ landmark[0]?.location[0] }}">Open in Google Maps</a>
+        </div>
+    </div>
+</div>
