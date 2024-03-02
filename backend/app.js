@@ -8,7 +8,7 @@ const authRoutes = require("./routes/auth")
 const checkAuth = require('./middleware/check-auth')
 const cors = require("cors")
 const db = require('./utils/mongodbUtil');
-
+ 
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
