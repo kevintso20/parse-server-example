@@ -85,7 +85,9 @@ exports.searchLandmarks = async (req , res) => {
 
 
 exports.updateLandmark = async (req , res) => {
-    try {       
+    try {     
+        
+        
         const landmark = new landmarkSchema({            
             title: req.body.title,
             short_info: req.body.short_info,

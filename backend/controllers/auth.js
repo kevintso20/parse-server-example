@@ -20,7 +20,7 @@ exports.login = async (req, res) => {
         if (!result) {
             return res.status(401).json({ message: "Wrong password" })
         }       
-        const token = jwt.sign({ email: fetchedUser.email, id: fetchedUser._id }, process.env.JWT_SECRET, { expiresIn: '1000h' })      
+        const token = jwt.sign({ username: fetchedUser.username, id: fetchedUser._id }, process.env.JWT_SECRET, { expiresIn: '1000h' })      
         return res.status(200).json({
             success: "true",
             message: "Successful login!",

@@ -41,4 +41,4 @@ const landmarkSchema = new mongoose.Schema({
 landmarkSchema.statics.searchCard = ["_id" , "title" ,"photo_thumb" ]
 landmarkSchema.statics.card = ["_id" , "title" ,"photo_thumb" , "short_info" , "photo" ]
 
-module.exports = mongoose.model('landmark', landmarkSchema);
+module.exports = mongoose.model('landmarks', landmarkSchema);

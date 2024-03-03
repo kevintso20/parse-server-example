@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const env = require('dotenv').config()
 const landmarkRoutes = require('./routes/landmark')
 const authRoutes = require("./routes/auth")
-const checkAuth = require('./middleware/check-auth')
 const cors = require("cors")
 const db = require('./utils/mongodbUtil');
 

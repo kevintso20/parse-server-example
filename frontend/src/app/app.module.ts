@@ -5,8 +5,9 @@ import { MenuComponent } from './general/menu/menu.component';
 import { AppRoutingModule } from './app.routing.module';
 import { HomeModule } from './page-home/home.module';
 import { SearchBarComponent } from './general/search-bar/search-bar.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AuthInterceptor } from './auth/auth-interceptor';
 
 
 @NgModule({
@@ -24,7 +25,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDialogModule,
 
   ],
-  providers: [],
+  providers: [
+    { provide:HTTP_INTERCEPTORS, useClass: AuthInterceptor , multi:true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
